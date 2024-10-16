@@ -6,7 +6,7 @@
 /*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 13:43:30 by tcohen            #+#    #+#             */
-/*   Updated: 2024/10/13 20:20:02 by tcohen           ###   ########.fr       */
+/*   Updated: 2024/10/16 13:43:43 by tcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	garbage_lstclear(t_garbage **lst);
 t_garbage *set_garbage(void);
 t_garbage *get_garbage(t_garbage *update);
 void	*g_malloc(size_t size);
+void	garbage_destroy(void);
 //ft_free.c
 void	g_free(void *ptr);
 #endif
