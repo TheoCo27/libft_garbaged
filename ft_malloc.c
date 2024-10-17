@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 14:15:14 by tcohen            #+#    #+#             */
-/*   Updated: 2024/10/16 17:15:25 by tcohen           ###   ########.fr       */
+/*   Updated: 2024/10/17 02:19:11 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ void	*g_malloc(size_t size)
 		return (NULL);
 	new = garbage_lstnew();
 	if (!new)
-		return (garbage_lstclear(&lst), NULL);
+		return (NULL);
 	garbage_lstaddback(new, &lst);
 	new->content = malloc(size);
 	if (!new->content)
-		return (garbage_lstclear(&lst), NULL);
+		return (free(new), NULL);
 	return (new->content);
 }
 
